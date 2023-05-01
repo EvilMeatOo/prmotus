@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
    config.vm.boot_timeout = 4000
    config.vm.synced_folder ".", "/vagrant", disabled: true
    config.vbguest.auto_update = false
-   config.vm.provision "shell", path: "prm_script.sh"
+   config.vm.provision "shell", path: "rpm_script.sh"
    config.vm.define boxname do |box|
       box.vm.box = boxconfig[:box_name]
       box.vm.box_version = boxconfig[:box_version]
